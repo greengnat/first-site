@@ -1,37 +1,114 @@
-*, *::after, *::before {
-    margin: 0;
-    box-sizing: border-box;
-    }
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
 
+:root {
+  --intro-padding: 15px;
+  --intro-height: 300px;
+  --font-color: #f7f7f7;
+  --nav-bar-color: #465ebf;
+  --background-color: #0d1b2a;
+  --main-color2: #5162a5;
+  --main-color2-lowalpha: #5162a59d;
+}
 
+/* Navigation styling */
+
+/* Page styling */
 
 body {
-    background-image: linear-gradient(to left,#BBD686, #619B8A);
+  background-color: var(--background-color);
 }
-.clock {
-    background-color: rgba(0, 0, 0, .8);
-    font-size:3rem;
-    color: rgba(255, 255, 255, 0.80);
-    border-radius: 50%;
-    text-align: center;
-    font-weight: bolder;
-}
-.calculator {
-    background-color: rgba(0, 0, 0, .8);
-    font-size:3rem;
-    color: rgba(255, 255, 255, 0.80);
-    border-radius: 50%;
-    text-align: center;
-    font-weight: bolder;
+
+.logo .h4 {
+  color: var(--font-color);
 }
 
 .projects {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    min-height: 500px;
-    height: 100%;
-    width: 30%;
+  padding-top: 3rem;
+  border-radius: 2px;
+  background-color: transparent;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 500px;
+  height: 100%;
+  width: 30%;
 }
-    
+
+.button {
+  border: 2px solid var(--main-color2-lowalpha);
+  border-radius: 0.2rem;
+  background-color: transparent;
+  color: var(--font-color);
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bolder;
+  transition: all 1s;
+  letter-spacing: 0.2rem;
+}
+
+.button:hover {
+  transform: translateY(-0.5rem);
+  background-color: rgba(255, 255, 255, 0.125);
+  font-size: 2.3rem;
+}
+
+a {
+  text-decoration: none;
+}
+/* 
+nav */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--nav-bar-color);
+}
+
+.logo {
+  color: var(--font-color);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--font-color);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.burger {
+  display: none;
+  cursor: pointer;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--font-color);
+  margin: 5px;
+}
+
+.navigation-header li {
+  font-family: "Poppins", sans-serif;
+}

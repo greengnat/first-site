@@ -4,7 +4,10 @@
 }
 
 :root {   
-    --clockColor: #48284A;}
+    --clockColor: #48284A;
+}
+
+
 
 body {
     background: linear-gradient(to left, #C2F970, #0A2463);

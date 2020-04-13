@@ -1,8 +1,59 @@
+// c.fillStyle = randomColor();
+// c.fillRect(100, 100, 100, 100);
+// c.fillStyle = 'rgba(0, 255, 0, 0.1)';
+// c.fillRect(200, 200, 100, 100);
+// c.fillStyle = 'rgba(0, 0, 255, 0.1)';
+// c.fillRect(300, 300, 100, 100);
+// c.fillStyle = 'rgba(255, 30, 100, 0.6)';
+// c.fillRect(500, 800, 100, 100);
+
+// //line
+// c.beginPath();
+// c.moveTo(50, 300);
+// c.lineTo(m, m);
+// c.strokeStyle = "green";
+// c.stroke();
+
+// c.beginPath();
+// c.moveTo(60, 400);
+// c.lineTo(300, 100);
+// c.strokeStyle = "red";
+// c.stroke();
+
+// c.beginPath();
+// c.moveTo(70, 500);
+// c.strokeStyle = "#ae4973";
+// c.lineTo(r, m);
+// c.moveTo(350, 200);
+// c.strokeStyle = "#cyan";
+// c.lineTo(m, m);
+// c.strokeStyle = "#fe34a3";
+// c.lineTo(100, 400);
+// c.strokeStyle = "#fe34a3";
+// c.stroke();
+// // c.beginPath();
+// // c.arc(300, 300, 30, 0, Math.PI * 2, false);
+// // c.strokeStyle = 'blue';
+// // c.stroke();
+
+// for (let i = 0; i < m; i++) {
+//     let x = Math.random() * window.innerWidth;
+//     let y = Math.random() * window.innerHeight;
+
+//     c.beginPath();
+//     c.arc(x, y, 30, 0, Math.PI * 2, false);
+//     c.strokeStyle = randomColor();
+//     c.stroke();
+// }
+// let circle = new Circle(200, 200, (Math.random() * 50), (Math.random() - 0.5) * 10, (Math.random() - 0.5) * 10);
+
 let colors = ["#01161E", "#124559", "#9A348E", "#0D0628", "#F1C8DB"];
 
 colors[
     Math.floor(Math.random() * 5)
 ]
+
+
 
 
 let mouse = {
@@ -12,10 +63,6 @@ let mouse = {
 
 let maxRadius = 45;
 let minRadius = 2;
-
-let ballGrowRangeX = 45;
-let ballGrowRangeY = 45;
-
 
 window.addEventListener('mousemove', function (event) {
     mouse.x = event.x
@@ -70,8 +117,7 @@ function Circle(x, y, radius, dx, dy, color) {
 
 
         //interactivity mouse over makes circles grow
-
-        if (mouse.x - this.x < ballGrowRangeX && mouse.x - this.x > -ballGrowRangeX && mouse.y - this.y < ballGrowRangeY && mouse.y - this.y > -ballGrowRangeY) {
+        if (mouse.x - this.x < 100 && mouse.x - this.x > -100 && mouse.y - this.y < 100 && mouse.y - this.y > -100) {
             if (this.radius < maxRadius) {
                 this.radius += 2;
             }
@@ -96,6 +142,22 @@ function animate() {
 
     };
 
+    // c.beginPath();
+    // c.arc(x, y, radius, 0, Math.PI * 2, false);
+    // c.strokeStyle = randomColor();
+    // c.stroke();
+
+    // if (x + radius > innerWidth || x - radius < 0) {
+    //     dx = -dx;
+    // }
+    // if (y + radius > innerHeight || y - radius < 0) {
+    //     dy = -dy;
+    // }
+    // x += dx;
+    // y += dy;
+
+    // circle.draw();
+    // circle.update();
 }
 
 function randomColor(lor = "") {
@@ -113,6 +175,14 @@ let r = Math.random() * 1000;
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+
+
+// let x = Math.random() * innerWidth;
+// let y = Math.random() * innerHeight;
+// let dx = (Math.random() - 0.5);
+// let dy = (Math.random() - 0.5);
+// let radius = Math.random() * 50;
+
 
 
 let circleArray = [];
